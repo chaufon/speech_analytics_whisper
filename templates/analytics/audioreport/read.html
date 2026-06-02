@@ -1,0 +1,64 @@
+{% extends "maintenance/base/edit.html" %}
+
+{% block edit-extra-start %}
+  <div class="col-12 mt-2 mb-4">
+    <div class="accordion" id="accordion-extra">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse-accordion-extra"
+            aria-expanded="true"
+            aria-controls="collapse-accordion-extra">
+            TIPIFICACIONES
+          </button>
+        </h2>
+        <div id="collapse-accordion-extra"
+             class="accordion-collapse collapse show"
+             data-bs-parent="#accordion-extra">
+          <div class="accordion-body row">
+            <table class="table table-sm border-1 mt-3">
+              <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Tipificación</th>
+                <th class="text-center">Resultado</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for result in object.get_results_for_details %}
+                <tr>
+                  <td class="align-middle">{{ forloop.counter }}</td>
+                  <td class="align-middle">{{ result.typification.name }}</td>
+                  <td class="text-center">{{ result.btn_state|safe }}</td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock edit-extra-start %}
+
+{% block form_accordion_title %}
+  DETALLES
+{% endblock form_accordion_title %}
+
+{% block form_accordion_headers %}
+  <th>#</th>
+  <th>Atributo</th>
+  <th>Detalle</th>
+{% endblock form_accordion_headers %}
+
+{% block form_accordion_body %}
+  {% for header, item_data in read_data %}
+    <tr>
+      <td class="align-middle">{{ forloop.counter }}</td>
+      <td class="align-middle">{{ header }}</td>
+      <td class="align-middle">{{ item_data.value }}</td>
+    </tr>
+  {% endfor %}
+{% endblock form_accordion_body %}

@@ -1,0 +1,11 @@
+{% include "maintenance/forms/non_field_errors.html" %}
+{% if form.show_import_field %}
+<div class="col-12 mb-5">{{ form.files.as_field_group }}</div>
+{% endif %}
+<div class="col-12 mb-4">{{ form.agent.as_field_group }}</div>
+<div class="col-12 mb-4">{{ form.agent_date.as_field_group }}</div>
+<div class="col my-5"></div>
+<div class="col my-5"></div>
+<div class="col my-5"></div>
+<div class="col my-5"></div>
+<div class="col my-5"></div>

@@ -1,0 +1,11 @@
+{% extends "maintenance/base/list.html" %}
+{% block list-actions-no-active %}
+  {% if user_can.edit %}
+    {% include "maintenance/components/buttons.html#edit" %}
+  {% else %}
+    {% include "maintenance/components/buttons.html#read" %}
+  {% endif %}
+  {% if user_can.history %}
+    {% include "maintenance/components/buttons.html#history" %}
+  {% endif %}
+{% endblock list-actions-no-active %}

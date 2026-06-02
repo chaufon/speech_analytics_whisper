@@ -1,0 +1,30 @@
+{% extends "analytics/common/edit_related.html" %}
+
+{% block excel-columns %}
+  <tr>
+    <td>1</td>
+    <td>[2]</td>
+    <td>Indica dos palabras variables en medio de la oración</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>[cuatro]</td>
+    <td>No permitido. Solo se permite un número entre corchetes.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>[0]</td>
+    <td>No permitido. Mínimo '{{ slop_min }}', máximo '{{ slop_max }}'.</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>[2] le habla [3]</td>
+    <td>No permitido. Solo se permite un único [X] por oración</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td></td>
+    <td class="fw-bold">No es obligatorio incluir '[X]'</td>
+  </tr>
+{% endblock excel-columns %}
+

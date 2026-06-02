@@ -1,0 +1,8 @@
+{% include "maintenance/forms/non_field_errors.html" %}
+<div class="col-12 d-flex justify-content-between align-items-center mb-2">
+  <p class="me-2">{{ object.speaker_label }}: {{ form }}</p>
+  <div>
+    {% include "analytics/audio/audiosegment/partials.html#audiosegment-cancelar" %}
+    {% include "analytics/audio/audiosegment/partials.html#audiosegment-enviar" %}
+  </div>
+</div>

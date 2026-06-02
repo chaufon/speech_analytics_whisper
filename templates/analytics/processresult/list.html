@@ -1,0 +1,13 @@
+{% extends "maintenance/base/list.html" %}
+
+{% block extra-headers-end %}
+  <th>Estado</th>
+{% endblock extra-headers-end %}
+
+{% block extra-data-end %}
+  <td class="align-middle">{{ object.btn_state|safe }}</td>
+{% endblock extra-data-end %}
+
+{% block list-actions-no-active %}
+  {% include "maintenance/components/buttons.html#read" %}
+{% endblock list-actions-no-active %}

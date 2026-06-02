@@ -1,0 +1,12 @@
+<div class="col-12 d-flex justify-content-between align-items-center mb-2 audiosegment-container">
+  <p class="me-2">{{ object.speaker_label }}: {{ object.text }}</p>
+  <div
+    {% if not user_can.edit %}
+      data-bs-toggle="tooltip" data-bs-placement="top"
+      title="No se puede editar en este momento"
+    {% endif %}
+    class="edit-button-container"
+  >
+    {% include "analytics/audio/audiosegment/partials.html#audiosegment-edit" %}
+  </div>
+</div>

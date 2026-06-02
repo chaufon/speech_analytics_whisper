@@ -1,0 +1,22 @@
+Django==5.2.7
+redis==7.0.1
+psycopg-c==3.2.12
+psycopg==3.2.12
+django-pghistory==3.8.3
+django-template-partials==25.2
+sentry-sdk[django]==2.42.1
+tablib[xlsx]==3.9.0
+python-dotenv==1.2.1
+python-magic==0.4.27
+celery==5.5.3
+flower==2.0.1
+boto3==1.40.59
+requests==2.32.5
+git+https://github.com/chaufon/maintenance-app.git@v1.1.0
+django-celery-results==2.6.0
+django-elasticsearch-dsl==8.2  # not >= 9.0
+django-silk==5.4.3
+pydub==0.25.1
+django-extensions==4.1
+ipython==9.6.0
+psutil==7.1.2

@@ -1,0 +1,37 @@
+{% extends "maintenance/base/edit.html" %}
+
+{% block form_accordion_title %}
+  Avanzado
+{% endblock form_accordion_title %}
+
+{% block form_accordion_headers %}
+  <th>Parámetro</th>
+  <th>Valor</th>
+{% endblock form_accordion_headers %}
+
+{% block form_accordion_body %}
+  <tr>
+    <td class="align-middle">{{ object.file_str_header }}</td>
+    <td class="align-middle">{{ object.file_str }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.transcription_start_date_header }}</td>
+    <td class="align-middle">{{ object.transcription_start_date_str }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.transcription_end_date_header }}</td>
+    <td class="align-middle">{{ object.transcription_end_date_str }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.process_error_details_header }}</td>
+    <td class="align-middle">{{ object.process_error_details }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.typify_start_date_header }}</td>
+    <td class="align-middle">{{ object.typify_start_date_str }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.typify_end_date_header }}</td>
+    <td class="align-middle">{{ object.typify_end_date_str }}</td>
+  </tr>
+{% endblock form_accordion_body %}

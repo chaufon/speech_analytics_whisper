@@ -1,0 +1,35 @@
+{% extends "maintenance/base/list.html" %}
+
+{% block extra-headers-end %}
+  <th>Estado</th>
+{% endblock extra-headers-end %}
+
+{% block extra-data-end %}
+  <td class="align-middle">{{ object.btn_state|safe }}</td>
+{% endblock extra-data-end %}
+
+{% block list-actions %}
+  {% if not object.is_running %}
+    {% include "analytics/process/buttons.html#play-audio" %}
+  {% endif %}
+  {% if user_can.edit and not object.is_running and not parent_object.is_finished %}
+    {% include "maintenance/components/buttons.html#edit" %}
+  {% else %}
+    {% include "maintenance/components/buttons.html#read" %}
+  {% endif %}
+  {% if user_can.delete and not object.is_running and object.can_be_deleted %}
+    {% include "maintenance/components/buttons.html#delete" %}
+  {% endif %}
+  {% if user_can.history %}
+    {% include "maintenance/components/buttons.html#history" %}
+  {% endif %}
+{% endblock list-actions %}
+
+{% block list-actions-no-active %}
+  {% if user_can.reactivate and object.can_be_reactivated %}
+    {% include "maintenance/components/buttons.html#reactivate" %}
+  {% endif %}
+  {% if user_can.history %}
+    {% include "maintenance/components/buttons.html#history" %}
+  {% endif %}
+{% endblock list-actions-no-active %}

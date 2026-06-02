@@ -1,0 +1,13 @@
+[
+{
+  "model": "users.campaign",
+  "pk": 1,
+  "fields": {
+    "create_date": "2025-03-13T22:01:30.855",
+    "modify_date": "2025-03-13T09:52:46.730",
+    "name": "SISTEMAS",
+    "is_active": true,
+    "description": "Campaña creada para que el área de Sistemas pueda probar la plataforma"
+  }
+}
+]

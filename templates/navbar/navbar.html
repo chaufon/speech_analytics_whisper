@@ -1,0 +1,139 @@
+{% load static %}
+<nav class="navbar navbar-expand-md shadow">
+  <div class="container-fluid px-2">
+    <img src="{% static 'maintenance/img/tux.svg' %}" alt="logo" height=60">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#top-navbar" aria-controls="top-navbar">
+      <i class="bi bi-grid fs-2"></i>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="top-navbar"
+         aria-labelledby="top-navbar-label">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#top-navbar" aria-controls="top-navbar">
+        <div class="d-flex justify-content-between p-2">
+          <img src="{% static 'maintenance/img/tux.svg' %}" alt="logo">
+          <i class="bi bi-x-lg fs-2"></i>
+        </div>
+      </button>
+      <ul class="navbar-nav ms-md-auto p-2 ">
+        {% if user.can_list_process %}
+          <li class="nav-item px-3 d-flex flex-md-column justify-content-center">
+            <a
+              class="nav-link text-center{% if menu_active == menu.process %} border-bottom border-primary-subtle border-3{% endif %}"
+              href="{{ user.get_process_url }}">
+              <i class="bi bi-pci-card-sound me-1 fs-5"></i>Procesos
+            </a>
+          </li>
+        {% endif %}
+        {% if user.can_list_processresult %}
+          <li class="nav-item px-3 d-flex flex-column justify-content-center dropdown">
+            <a
+              class="nav-link dropdown-toggle text-center{% if menu_active == menu.result %} border-bottom border-primary-subtle border-3{% endif %}"
+              href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#results-menu"
+              aria-expanded="false">
+              <i class="bi bi-bar-chart-line me-1 fs-5"></i>Resultados
+            </a>
+            <ul class="dropdown-menu dropdown-menu-start" id="results-menu">
+              <li>
+                <a
+                  class="dropdown-item text-center text-md-start"
+                  href="{{ user.get_processresult_url }}">
+                  Individuales
+                </a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item text-center text-md-start"
+                  href="{{ user.get_audioreport_url }}">
+                  Por audios
+                </a>
+              </li>
+            </ul>
+          </li>
+        {% endif %}
+        {% if user.can_list_maintenance %}
+          <li class="nav-item px-3 d-flex flex-column justify-content-center dropdown">
+            <a
+              class="nav-link dropdown-toggle text-center{% if menu_active == menu.mantenimientos %} border-bottom border-primary-subtle border-3{% endif %}"
+              href="#" role="button" data-bs-toggle="dropdown" data-bs-target="#mantenimientos-menu"
+              aria-expanded="false">
+              <i class="bi bi-gear me-1 fs-5"></i>Mantenimientos
+            </a>
+            <ul class="dropdown-menu dropdown-menu-start" id="mantenimientos-menu">
+              {% if user.can_list_agent %}
+                <li><a class="dropdown-item text-center text-md-start"
+                       href="{% url 'analytics:agent:home' %}">Asesores</a>
+                </li>
+              {% endif %}
+              {% if user.can_list_typification %}
+                <li><a class="dropdown-item text-center text-md-start"
+                       href="{% url 'analytics:typification:home' %}">Tipificaciones</a>
+                </li>
+              {% endif %}
+              {% if user.can_list_user %}
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-center text-md-start"
+                       href="{% url 'users:user:home' %}">Usuarios</a>
+                </li>
+              {% endif %}
+              {% if user.can_list_role %}
+                <li><a class="dropdown-item text-center text-md-start"
+                       href="{% url 'users:role:home' %}">Roles</a>
+                </li>
+              {% endif %}
+              {% if user.can_list_campaign %}
+                <li><a class="dropdown-item text-center text-md-start"
+                       href="{% url 'users:campaign:home' %}">Campañas</a>
+                </li>
+              {% endif %}
+              {% if user.can_list_config %}
+                <li><a class="dropdown-item text-center text-md-start"
+                       href="{% url 'common:config:home' %}">Configuración</a>
+                </li>
+              {% endif %}
+            </ul>
+          </li>
+        {% endif %}
+        <li class="nav-item ps-3 pe-0 py-1 dropdown">
+          <a class="nav-link dropdown-toggle text-center" href="#" role="button"
+             data-bs-toggle="dropdown" data-bs-target="#user-menu" aria-expanded="false">
+            <i class="bi bi-person-circle fs-3"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" id="user-menu">
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Salir del sistema">
+              <a class="dropdown-item text-center text-md-start" href="{% url 'logout' %}">
+                <i class="bi bi-person-walking me-1"></i>Logout
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Usuario">
+              <a class="dropdown-item text-center text-md-start disabled" href="#">
+                <i class="bi bi-person me-1"></i>{{ user.get_full_name|title }}
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Rol">
+              <a class="dropdown-item text-center text-md-start disabled" href="#">
+                <i class="bi bi-person-vcard me-1"></i>{{ user.role|title }}
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Campaña">
+              <a class="dropdown-item text-center text-md-start disabled" href="#">
+                <i class="bi bi-people-fill me-1"></i>{{ user.campaign|title }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

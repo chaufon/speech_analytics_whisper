@@ -1,0 +1,42 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$8BQtMJL4ob12xCN86OaBef$B7y0JYTLAh6Qm/jMQlLYp2NDm/16fLcTyphDgVW+wIc=",
+    "last_login": "2025-04-29T21:53:00.063",
+    "is_superuser": true,
+    "first_name": "Admin",
+    "last_name": "User",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-12T09:55:56.089",
+    "username": "00000000",
+    "document_type": 1,
+    "document_number": "00000000",
+    "role": 1,
+    "campaign": 1
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$Nv5Q74rEO9wGRLMEs50LKh$fJ/Cq3kb5eUYd+/456Ctzkg6qCoJ8uePTLhFwy9DH04=",
+    "last_login": "2025-04-29T21:55:05.931",
+    "is_superuser": false,
+    "first_name": "Super",
+    "last_name": "User",
+    "email": "user@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-16T00:18:44.641",
+    "username": "00000001",
+    "document_type": 1,
+    "document_number": "00000001",
+    "role": 2,
+    "campaign": 2
+  }
+}
+]

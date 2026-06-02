@@ -1,0 +1,21 @@
+[
+{
+  "model": "common.config",
+  "pk": 1,
+  "fields": {
+    "create_date": "2025-09-28T17:59:33.666",
+    "modify_date": "2025-09-28T17:59:33.666",
+    "audios_slow_down_enable": false,
+    "audios_slow_down_factor": 0.95,
+    "process_list_refresh": 5,
+    "transcribe_get_results_max_tries": 20,
+    "transcribe_get_results_seconds_between": 10,
+    "localai_mode": 1,
+    "localai_use_cpu": false,
+    "localai_get_max_tries": 1000,
+    "localai_get_seconds_between": 10,
+    "localai_track_stats": true,
+    "comment": ""
+  }
+}
+]

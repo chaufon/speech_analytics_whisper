@@ -1,0 +1,23 @@
+{% load partials %}
+
+<div id="export-individual">
+  {% partialdef export-individual %}
+    <button type="submit" formaction="{{ object.export_individual_url }}" form="hidden-export-form"
+            formmethod="get" class="btn btn-outline-success">
+      <i class="bi bi-file-earmark-excel me-1"></i>Exportar
+    </button>
+  {% endpartialdef export-individual %}
+</div>
+
+<div id="read-report">
+  {% partialdef read-report %}
+    <button type="button" class="btn btn-{% if is_related %}outline-{% endif %}secondary"
+            hx-target="#modal-form-dialog" hx-get="{{ object.audioreport_url }}"
+      {% if button_no_text %}
+            data-bs-toggle="tooltip" data-bs-placement="top" title="Ver"
+      {% endif %}
+    >
+      <i class="bi bi-eye{% if button_no_text %}"></i>{% else %} me-1"></i>Ver{% endif %}
+    </button>
+  {% endpartialdef read-report %}
+</div>

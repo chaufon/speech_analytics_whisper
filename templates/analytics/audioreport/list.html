@@ -1,0 +1,7 @@
+{% extends "maintenance/base/list.html" %}
+
+{% block list-actions %}
+  {% if object.has_results %}
+    {% include "analytics/common/buttons.html#read-report" %}
+  {% endif %}
+{% endblock list-actions %}

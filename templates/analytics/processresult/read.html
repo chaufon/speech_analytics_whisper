@@ -1,0 +1,21 @@
+{% extends "maintenance/base/edit.html" %}
+
+{% block form_accordion_title %}
+  DETALLES
+{% endblock form_accordion_title %}
+
+{% block form_accordion_headers %}
+  <th>#</th>
+  <th>Atributo</th>
+  <th>Detalle</th>
+{% endblock form_accordion_headers %}
+
+{% block form_accordion_body %}
+  {% for header, item_data in read_data %}
+    <tr>
+      <td class="align-middle">{{ forloop.counter }}</td>
+      <td class="align-middle">{{ header }}</td>
+      <td class="align-middle">{{ item_data.value }}</td>
+    </tr>
+  {% endfor %}
+{% endblock form_accordion_body %}

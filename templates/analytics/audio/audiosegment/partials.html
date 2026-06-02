@@ -1,0 +1,40 @@
+{% load partials %}
+
+<div id="audiosegment-edit">
+  {% partialdef audiosegment-edit %}
+    <button type="button"
+            class="btn btn-{% if is_related %}outline-{% endif %}warning audiosegment-edit-btn"
+            hx-target="#audiosegment-{{ object.pk }}" hx-get="{{ object.edit_url }}"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"
+            {% if not user_can.edit %}disabled{% endif %}
+    >
+      <i class="bi bi-pencil"></i>
+    </button>
+  {% endpartialdef audiosegment-edit %}
+</div>
+
+<div id="audiosegment-cancelar">
+  {% partialdef audiosegment-cancelar %}
+    <button type="button" class="btn btn-outline-secondary audiosegment-cancelar-btn"
+            id="audiosegment-cancelar-{{ object.pk }}"
+            hx-target="#audiosegment-{{ object.pk }}"
+            hx-get="{{ object.read_url }}" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="Cancelar"
+    >
+      <i class="bi bi-x-lg"></i>
+    </button>
+  {% endpartialdef audiosegment-cancelar %}
+</div>
+
+<div id="audiosegment-enviar">
+  {% partialdef audiosegment-enviar %}
+    <button type="submit" class="btn btn-outline-primary">
+      <div class="unsent" data-bs-toggle="tooltip" data-bs-placement="top"
+           title="Enviar"><i class="bi bi-send"></i></div>
+      <div class="sent d-none" data-bs-toggle="tooltip" data-bs-placement="top"
+           title="Enviando">
+        <span class="spinner-grow spinner-grow-sm text-white fs-5"></span>
+      </div>
+    </button>
+  {% endpartialdef audiosegment-enviar %}
+</div>

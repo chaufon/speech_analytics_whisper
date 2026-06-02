@@ -1,0 +1,7 @@
+-r ../common/base.txt
+
+faster-whisper==1.2.0
+nvidia-cublas-cu12==12.8.4.1
+nvidia-cudnn-cu12==9.10.2.21
+huggingface-hub[cli]==0.35.3
+pyannote-audio==4.0.1

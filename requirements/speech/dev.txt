@@ -1,0 +1,6 @@
+-r base.txt
+
+black==25.9.0
+flake8==7.3.0
+pre_commit==4.3.0
+isort==7.0.0

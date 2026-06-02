@@ -1,0 +1,52 @@
+{% extends "maintenance/base/list.html" %}
+
+{% block before-table %}
+  <div class="d-none" hx-get="{{ urls.main }}" hx-target="#extra-buttons" hx-swap="innerHTML"
+       hx-trigger="ForceUpdateProcessBtn from:body">
+  </div>
+  {% if auto_update_seconds %}
+    <div class="d-none" hx-get="{{ urls.list }}" hx-include="#search-filters"
+         hx-indicator="#search-indicator" hx-swap="outerHTML" hx-target="#search-results"
+         hx-trigger="every {{ auto_update_seconds }}s">
+    </div>
+  {% endif %}
+{% endblock before-table %}
+
+{% block extra-headers-start %}
+  <th class="text-center">#</th>
+{% endblock extra-headers-start %}
+
+{% block extra-headers-end %}
+  <th>Estado</th>
+{% endblock extra-headers-end %}
+
+{% block extra-data-start %}
+  {% if user_can.edit %}
+  <td class="align-middle text-center">
+    <input type="checkbox" name="selected_process" value="{{ object.pk }}" hx-get="{{ urls.main }}"
+           class="form-check-input" hx-target="#extra-buttons" hx-swap="innerHTML">
+  </td>
+  {% endif %}
+{% endblock extra-data-start %}
+
+{% block extra-data-end %}
+  <td class="align-middle">{{ object.btn_state|safe }}</td>
+{% endblock extra-data-end %}
+
+{% block list-actions %}
+  {% if object.has_related_model %}
+    {% include "maintenance/components/buttons.html#related-hide" %}
+    {% include "maintenance/components/buttons.html#related-show" %}
+  {% endif %}
+  {% if user_can.edit and not object.is_running and not object.is_finished %}
+    {% include "maintenance/components/buttons.html#edit" %}
+  {% else %}
+    {% include "maintenance/components/buttons.html#read" %}
+  {% endif %}
+  {% if user_can.delete and not object.is_running and object.can_be_deleted %}
+    {% include "maintenance/components/buttons.html#delete" %}
+  {% endif %}
+  {% if user_can.history %}
+    {% include "maintenance/components/buttons.html#history" %}
+  {% endif %}
+{% endblock list-actions %}

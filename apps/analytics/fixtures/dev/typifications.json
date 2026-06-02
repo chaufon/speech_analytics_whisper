@@ -1,0 +1,54 @@
+[
+{
+  "model": "analytics.typification",
+  "pk": 1,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.321",
+    "modify_date": "2025-04-09T08:28:31.321",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "SALUDA DE INMEDIATO E IDENTIFÁNDOSE"
+  }
+},
+{
+  "model": "analytics.typification",
+  "pk": 2,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.699",
+    "modify_date": "2025-04-09T08:45:56.699",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "VALIDACIÓN DE LA TITULARIDAD"
+  }
+},
+{
+  "model": "analytics.typification",
+  "pk": 3,
+  "fields": {
+    "create_date": "2025-04-12T15:58:58.879",
+    "modify_date": "2025-04-12T15:58:58.879",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "IDENTIFICA NECESIDAD PARA OFRECER MEJOR PLAN"
+  }
+},
+{
+  "model": "analytics.typification",
+  "pk": 4,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.669",
+    "modify_date": "2025-04-13T21:58:28.669",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "PRUEBA"
+  }
+}
+]

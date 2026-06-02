@@ -1,0 +1,18 @@
+{% extends "maintenance/base/list.html" %}
+
+{% block list-actions %}
+  {% if user_can.reset %}
+    {% include "maintenance/components/buttons.html#reset-password" %}
+  {% endif %}
+  {% if user_can.edit %}
+    {% include "maintenance/components/buttons.html#edit" %}
+  {% else %}
+    {% include "maintenance/components/buttons.html#read" %}
+  {% endif %}
+  {% if user_can.delete %}
+    {% include "maintenance/components/buttons.html#delete" %}
+  {% endif %}
+  {% if user_can.history %}
+    {% include "maintenance/components/buttons.html#history" %}
+  {% endif %}
+{% endblock list-actions %}

@@ -1,0 +1,28 @@
+{% include "maintenance/forms/non_field_errors.html" %}
+<div class="col-12 mb-4">{{ form.name.as_field_group }}</div>
+<div class="col-12 mb-4">{{ form.typifications.as_field_group }}</div>
+{% if form.show_import_fields %}
+  <div class="col-12 mb-4 mt-3">
+    <div class="accordion" id="accordion-role-form">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button {{ form.has_import_errors|yesno:",collapsed" }}"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapse-audios"
+                  aria-expanded="{{ form.has_import_errors|yesno:"true,false" }}"
+                  aria-controls="collapse-audios">
+            Importar audios (opcional)
+          </button>
+        </h2>
+        <div id="collapse-audios"
+             class="accordion-collapse {{ form.has_import_errors|yesno:"show,collapse" }}"
+             data-bs-parent="#accordion-role-form">
+          <div class="accordion-body row">
+            <div class="col-12 mb-4">{{ form.files.as_field_group }}</div>
+            <div class="col-6 mb-4">{{ form.agent.as_field_group }}</div>
+            <div class="col-6 mb-4">{{ form.agent_date.as_field_group }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

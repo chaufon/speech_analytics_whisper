@@ -1,0 +1,26 @@
+{% extends "maintenance/base/edit.html" %}
+
+{% block form_accordion_title %}
+  Avanzado
+{% endblock form_accordion_title %}
+
+{% block form_accordion_headers %}
+  <th>Parámetro</th>
+  <th>Valor</th>
+{% endblock form_accordion_headers %}
+
+{% block form_accordion_body %}
+  <tr>
+    <td class="align-middle">{{ object.start_process_header }}</td>
+    <td class="align-middle">{{ object.start_process_str }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.end_process_header }}</td>
+    <td class="align-middle">{{ object.end_process_str }}</td>
+  </tr>
+  <tr>
+    <td class="align-middle">{{ object.tries_header }}</td>
+    <td class="align-middle">{{ object.tries }}</td>
+  </tr>
+{% endblock form_accordion_body %}
+

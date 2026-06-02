@@ -1,0 +1,548 @@
+[
+{
+  "model": "analytics.pattern",
+  "pk": 1,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.565",
+    "modify_date": "2025-04-09T08:28:31.565",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Buen día, soy [2] y te estoy llamando de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 2,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.568",
+    "modify_date": "2025-04-09T08:28:31.568",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Qué tal? Muy buenos días, soy [2] de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 3,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.570",
+    "modify_date": "2025-04-09T08:28:31.570",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Hola, ¿qué tal? Soy [2] y te llamo en representación de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 4,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.572",
+    "modify_date": "2025-04-09T08:28:31.572",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Hola, buenos días, mi nombre es [2] y te llamo desde Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 5,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.575",
+    "modify_date": "2025-04-09T08:28:31.575",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Buenos días, soy [2] de Operator, ¿cómo est",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 6,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.577",
+    "modify_date": "2025-04-09T08:28:31.577",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Qué tal? Buenos días, te habla [2] de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 7,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.579",
+    "modify_date": "2025-04-09T08:28:31.579",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Hola, muy buenos días, soy [2] llamando de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 8,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.581",
+    "modify_date": "2025-04-09T08:28:31.581",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Buenos días, ¿cómo te va? Soy [2] y te llamo de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 9,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.583",
+    "modify_date": "2025-04-09T08:28:31.583",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Hola, buenos días, mi nombre es [2] y te estoy contactando de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 10,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.585",
+    "modify_date": "2025-04-09T08:28:31.585",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Buen día, te habla [2] y llamo de parte de Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 11,
+  "fields": {
+    "create_date": "2025-04-09T08:28:31.587",
+    "modify_date": "2025-04-09T08:28:31.587",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Hola, ¿cómo te va? Mi nombre es [2] y te llamo desde Operator",
+    "typification": 1
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 12,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.964",
+    "modify_date": "2025-04-09T08:45:56.964",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Me comunico con el titular o usuario de la linea?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 13,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.968",
+    "modify_date": "2025-04-09T08:45:56.968",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Me comunico con el titular de esta línea? ¿Con quién tengo el gusto?, ¿me brinda su DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 14,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.970",
+    "modify_date": "2025-04-09T08:45:56.970",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Tengo el agrado de comunicarme con el titular?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 15,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.973",
+    "modify_date": "2025-04-09T08:45:56.973",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Hablo con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 16,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.975",
+    "modify_date": "2025-04-09T08:45:56.975",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Estoy hablando con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 17,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.977",
+    "modify_date": "2025-04-09T08:45:56.977",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Me estoy comunicando con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 18,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.979",
+    "modify_date": "2025-04-09T08:45:56.979",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Es usted el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 19,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.981",
+    "modify_date": "2025-04-09T08:45:56.982",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Estoy en contacto con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 20,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.984",
+    "modify_date": "2025-04-09T08:45:56.984",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Podría confirmar si hablo con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 21,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.986",
+    "modify_date": "2025-04-09T08:45:56.986",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Tengo el gusto de hablar con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 22,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.988",
+    "modify_date": "2025-04-09T08:45:56.988",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Me podría confirmar si usted es el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 23,
+  "fields": {
+    "create_date": "2025-04-09T08:45:56.990",
+    "modify_date": "2025-04-09T08:45:56.990",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Estoy conversando con el titular de la línea, [2], con el DNI?",
+    "typification": 2
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 24,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.274",
+    "modify_date": "2025-04-12T15:58:59.274",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Lo utilizas para trabajar o estudiar?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 25,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.279",
+    "modify_date": "2025-04-12T15:58:59.279",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Usas Facebook, Instagram, WhatsApp?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 26,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.281",
+    "modify_date": "2025-04-12T15:58:59.281",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Sueles ver películas o series?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 27,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.284",
+    "modify_date": "2025-04-12T15:58:59.284",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Te gustaría tener más datos para usar en streaming o juegos en línea?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 28,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.286",
+    "modify_date": "2025-04-12T15:58:59.286",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Qué actividades realizas más frecuentemente que consumen tus datos, como ver videos o navegar en redes sociales?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 29,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.288",
+    "modify_date": "2025-04-12T15:58:59.288",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Para que mas utilizas tu internet?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 30,
+  "fields": {
+    "create_date": "2025-04-12T15:58:59.290",
+    "modify_date": "2025-04-12T15:58:59.290",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Utilizas mas las llamadas o el internet?",
+    "typification": 3
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 31,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.936",
+    "modify_date": "2025-04-13T21:58:28.936",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Lo utilizas para trabajar o estudiar?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 32,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.940",
+    "modify_date": "2025-04-13T21:58:28.940",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Usas Facebook, Instagram, WhatsApp?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 33,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.943",
+    "modify_date": "2025-04-13T21:58:28.943",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Sueles ver películas o series?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 34,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.945",
+    "modify_date": "2025-04-13T21:58:28.945",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Te gustaría tener más datos para usar en streaming o juegos en línea?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 35,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.947",
+    "modify_date": "2025-04-13T21:58:28.947",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Qué actividades realizas más frecuentemente que consumen tus datos, como ver videos o navegar en redes sociales?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 36,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.949",
+    "modify_date": "2025-04-13T21:58:28.949",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Para que mas utilizas tu internet?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 37,
+  "fields": {
+    "create_date": "2025-04-13T21:58:28.951",
+    "modify_date": "2025-04-13T21:58:28.951",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "¿Utilizas mas las llamadas o el internet?",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 38,
+  "fields": {
+    "create_date": "2025-04-13T22:05:31.909",
+    "modify_date": "2025-04-13T22:05:31.910",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Buen día!",
+    "typification": 4
+  }
+},
+{
+  "model": "analytics.pattern",
+  "pk": 39,
+  "fields": {
+    "create_date": "2025-04-13T22:32:40.512",
+    "modify_date": "2025-04-13T22:32:40.512",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "sentence": "Buenos días",
+    "typification": 4
+  }
+}
+]

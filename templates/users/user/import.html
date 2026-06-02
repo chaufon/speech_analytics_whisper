@@ -1,0 +1,57 @@
+{% extends "maintenance/base/edit.html" %}
+
+{% block form_accordion_body %}
+  <tr>
+    <td>1</td>
+    <td>username</td>
+    <td>Obligatorio. Solo números</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>password</td>
+    <td>Obligatorio.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>email</td>
+    <td>Obligatorio.</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>first_name</td>
+    <td>Obligatorio. Nombres del usuario.</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>last_name</td>
+    <td
+    >Obligatorio. Apellidos del usuario.
+    </td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>document_type</td>
+    <td>Obligatorio. Numérico. {{ document_type_choices }}</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>document_number</td>
+    <td>Obligatorio.</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>role_id</td>
+    <td>Obligatorio. Colocar el número que figura en la columna "ID" en
+      <a href="{% url 'users:role:home' %}" target="_blank">Roles disponibles</a>
+    </td>
+  </tr>
+  {% if user.is_superuser %}
+  <tr>
+    <td>10</td>
+    <td>campaign_id</td>
+    <td>Obligatorio. Colocar el número que figura en la columna "ID" en
+      <a href="{% url 'users:campaign:home' %}" target="_blank">Campañas disponibles</a>
+    </td>
+  </tr>
+  {% endif %}
+{% endblock form_accordion_body %}

@@ -1,0 +1,80 @@
+{% load partials %}
+
+<div id="add-process">
+  {% partialdef add-process %}
+    {% if user_can.add %}
+      <button type="button" class="btn btn-{% if is_related %}outline-{% endif %}success"
+              hx-get="{{ urls.add }}" hx-target="#modal-form-dialog">
+        <i class="bi bi-plus-lg me-1"></i>Añadir{% if is_related %} {{ nombre }}{% endif %}
+      </button>
+    {% endif %}
+  {% endpartialdef add-process %}
+</div>
+
+
+<div id="start">
+  {% partialdef start %}
+    {% if user_can.start %}
+      <button type="button" class="btn btn-primary" hx-post="{{ object.start_url }}">
+        <i class="bi bi-play-circle me-1"></i>Procesar
+      </button>
+    {% endif %}
+  {% endpartialdef start %}
+</div>
+
+<div id="pause">
+  {% partialdef pause %}
+    {% if user_can.pause %}
+      <button type="button" class="btn btn-warning" hx-post="{{ object.pause_url }}">
+        <i class="bi bi-pause-circle me-1"></i>Pausar
+      </button>
+    {% endif %}
+  {% endpartialdef pause %}
+</div>
+
+<div id="continue">
+  {% partialdef continue %}
+    {% if user_can.continue %}
+      <button type="button" class="btn btn-warning" hx-post="{{ object.continue_url }}">
+        <i class="bi bi-play-circle me-1"></i>Continuar
+      </button>
+    {% endif %}
+  {% endpartialdef continue %}
+</div>
+
+<div id="restart">
+  {% partialdef restart %}
+    {% if user_can.restart %}
+      <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+          <i class="bi bi-arrow-clockwise me-1"></i>Reprocesar
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" hx-post="{{ object.restart_full_url }}">{{ object.restart_full_text }}</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" hx-post="{{ object.restart_partial_url }}">{{ object.restart_partial_text }}</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" hx-post="{{ object.restart_reset_typify_url }}">{{ object.restart_reset_typify_text }}</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" hx-post="{{ object.restart_reset_new_url }}">{{ object.restart_reset_new_text }}</a></li>
+        </ul>
+      </div>
+    {% endif %}
+  {% endpartialdef restart %}
+</div>
+
+<div id="play-audio">
+  {% partialdef play-audio %}
+    <button type="button" class="btn btn-{% if is_related %}outline-{% endif %}dark"
+            hx-target="#modal-secondary-dialog" hx-get="{{ object.play_url }}"
+      {% if button_no_text %}
+            data-bs-toggle="tooltip" data-bs-placement="top"
+            title="{% if object.is_transcribed %}Transcripción{% else %}Reproducir{% endif %}"
+      {% endif %}
+    >
+      <i class="bi bi-music-note{% if object.is_transcribed %}-list{% endif %}
+        {% if button_no_text %}"></i>{% else %} me-1"></i>Reproducir{% endif %}
+    </button>
+  {% endpartialdef play-audio %}
+</div>

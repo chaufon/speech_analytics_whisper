@@ -1,0 +1,64 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">
+      {% if audiosegments_per_minute %}
+        Ver Transcripción de
+      {% else %}
+        Reproducir
+      {% endif %}Audio</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+  </div>
+  <div class="modal-body">
+    <div class="container-fluid">
+      <div class="row g-1 pt-2">
+        <div class="col-12 mb-3">
+          <div id="audio-error" class="alert alert-danger d-none">
+            No se pudo cargar el archivo de audio.
+            Es posible que la ubicación del archivo no sea accesible.
+          </div>
+        </div>
+        <div class="col-12 mb-3">
+          <audio controls class="w-100" id="audio-player-modal">
+            <source src="{{ parent_object.file.url }}" type="audio/mp3"
+                    onerror="document.getElementById('audio-error').classList.remove('d-none');">
+            Reproductor
+          </audio>
+        </div>
+        {% if audiosegments_per_minute %}
+          <div class="col-12 mb-3">
+          <div class="accordion" id="transcription-{{ parent_object.pk }}">
+            {% for audiosegments in audiosegments_per_minute %}
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed"
+                          type="button" data-bs-toggle="collapse"
+                          data-bs-target="#min-{{ forloop.counter0 }}" aria-expanded="false"
+                          aria-controls="min-{{ forloop.counter0 }}">
+                    MINUTO - {{ forloop.counter0 }}
+                  </button>
+                </h2>
+                <div id="min-{{ forloop.counter0 }}" class="accordion-collapse collapse"
+                     data-bs-parent="#transcription-{{ parent_object.pk }}">
+                  <div class="accordion-body">
+                    {% for audiosegment in audiosegments %}
+                      <form hx-post="{{ audiosegment.edit_url }}" hx-target="this"
+                            id="audiosegment-{{ audiosegment.pk }}">
+                        {% with object=audiosegment %}
+                          {% include "analytics/audio/audiosegment/read.html" %}
+                        {% endwith %}
+                      </form>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer d-flex justify-content-between">
+      {% include "maintenance/components/buttons.html#modal-cancelar" %}
+    </div>
+  </div>
+</div>

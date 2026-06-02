@@ -1,0 +1,16 @@
+[
+{
+  "model": "analytics.word",
+  "pk": 1,
+  "fields": {
+    "create_date": "2025-03-18T18:02:46.213",
+    "modify_date": "2025-03-18T18:02:46.213",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "word": "DNI",
+    "wordlist": 1
+  }
+}
+]

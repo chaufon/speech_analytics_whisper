@@ -1,0 +1,21 @@
+{% if object %}
+  {% with process_action=object.get_action %}
+    {% if process_action == process.start %}
+      {% include 'analytics/process/buttons.html#start' %}
+    {% elif process_action == process.pause %}
+      {% include 'analytics/process/buttons.html#pause' %}
+    {% elif process_action == process.continue %}
+      {% include 'analytics/process/buttons.html#continue' %}
+    {% elif process_action == process.restart %}
+      {% include 'analytics/process/buttons.html#restart' %}
+    {% else %}
+      {% if user.can_add_process %}
+        {% include 'analytics/process/buttons.html#add-process' %}
+      {% endif %}
+    {% endif %}
+  {% endwith %}
+{% else %}
+  {% if user.can_add_process %}
+    {% include 'analytics/process/buttons.html#add-process' %}
+  {% endif %}
+{% endif %}

@@ -1,0 +1,17 @@
+{% extends "maintenance/base/home.html" %}
+
+{% block extra-buttons %}
+  {% with button_no_text=False %}
+    {% include "analytics/process/main.html" %}
+  {% endwith %}
+{% endblock extra-buttons %}
+
+{% block content %}
+  <div class="modal fade" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="static"
+       aria-labelledby="Edición" id="modal-secondary">
+    <div class="modal-dialog modal-fullscreen-lg-down {{ modal_size }} modal-dialog-scrollable"
+         id="modal-secondary-dialog" hx-target="this">
+    </div>
+  </div>
+  {{ block.super }}
+{% endblock %}

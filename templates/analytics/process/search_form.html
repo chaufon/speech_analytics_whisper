@@ -1,0 +1,28 @@
+<div class="col-lg-3">
+    <label for="{{ form.param.id_for_label }}">{{ form.param.label }}</label>
+    {{ form.param }}
+</div>
+<div class="col-lg-3">
+    <label for="{{ form.state.id_for_label }}">{{ form.state.label }}</label>
+    {{ form.state }}
+</div>
+{% if form.show_created_by %}
+  <div class="col-lg-2">
+    <label for="{{ form.created_by.id_for_label }}">{{ form.created_by.label }}</label>
+    {{ form.created_by }}
+</div>
+{% endif %}
+<div class="col-lg-2 d-flex flex-column justify-content-end">
+    <div class="form-check align-bottom">
+        {{ form.is_running }}
+        <label for="{{ form.is_running.id_for_label }}"
+               class="ms-3">{{ form.is_running.label }}</label>
+    </div>
+</div>
+<div class="col-lg-2 d-flex flex-column justify-content-end">
+    <div class="form-check align-bottom">
+        {{ form.only_active }}
+        <label for="{{ form.only_active.id_for_label }}"
+               class="ms-3">{{ form.only_active.label }}</label>
+    </div>
+</div>

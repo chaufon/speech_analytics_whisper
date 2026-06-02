@@ -1,0 +1,17 @@
+.navbar .container-fluid img {
+  max-width: 135px;
+}
+
+input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.edit-button-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.audiosegment-container:hover .edit-button-container {
+  opacity: 1;
+}

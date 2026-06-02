@@ -1,0 +1,182 @@
+{% include "maintenance/forms/non_field_errors.html" %}
+<div class="mb-3">{{ form.name.as_field_group }}</div>
+<div class="col-md-6 mb-3">{{ form.access.as_field_group }}</div>
+<div class="col-md-6 mb-3">{{ form.type.as_field_group }}</div>
+<div class="col-md-6 mb-3">{{ form.is_managed_by.as_field_group }}</div>
+<div class="col-12 mb-2">
+  <div class="accordion" id="accordion-role-form">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-processresult" aria-expanded="false"
+                aria-controls="collapse-processresult">
+          Permisos Resultados de Procesos
+        </button>
+      </h2>
+      <div id="collapse-processresult" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-6">{{ form.can_export_processresult.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_processresult.as_field_group }}</div>
+          <div class="col-12">{{ form.scope_processresult.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-processes" aria-expanded="false"
+                aria-controls="collapse-processes">
+          Permisos Procesos
+        </button>
+      </h2>
+      <div id="collapse-processes" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-12">{{ form.can_add_process.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_process.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_process.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_process.as_field_group }}</div>
+          <div class="col-12">{{ form.scope_process.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-typifications" aria-expanded="false"
+                aria-controls="collapse-typifications">
+          Permisos Mantenimiento Tipificaciones
+        </button>
+      </h2>
+      <div id="collapse-typifications" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-12">{{ form.can_add_typification.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_typification.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_typification.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_import_typification.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_export_typification.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_typification.as_field_group }}</div>
+          <div class="col-12">{{ form.scope_typification.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-wordlists" aria-expanded="false"
+                aria-controls="collapse-wordlists">
+          Permisos Mantenimiento Palabras Personalizadas
+        </button>
+      </h2>
+      <div id="collapse-wordlists" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-12">{{ form.can_add_wordlist.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_wordlist.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_wordlist.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_import_wordlist.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_export_wordlist.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_wordlist.as_field_group }}</div>
+          <div class="col-12">{{ form.scope_wordlist.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-agents" aria-expanded="false"
+                aria-controls="collapse-agents">
+          Permisos Mantenimiento Asesores
+        </button>
+      </h2>
+      <div id="collapse-agents" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-12">{{ form.can_add_agent.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_agent.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_agent.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_import_agent.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_export_agent.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_agent.as_field_group }}</div>
+          <div class="col-12">{{ form.scope_agent.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-campaigns" aria-expanded="false"
+                aria-controls="collapse-campaigns">
+          Permisos Mantenimiento Campañas
+        </button>
+      </h2>
+      <div id="collapse-campaigns" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-12">{{ form.can_add_campaign.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_campaign.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_campaign.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_export_campaign.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_campaign.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-config" aria-expanded="false" aria-controls="collapse-config">
+          Permisos Mantenimiento Configuración
+        </button>
+      </h2>
+      <div id="collapse-config" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-6">{{ form.can_edit_config.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_config.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-user" aria-expanded="false" aria-controls="collapse-user">
+          Permisos Mantenimiento Usuarios
+        </button>
+      </h2>
+      <div id="collapse-user" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-6">{{ form.can_add_user.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_user.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_user.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_import_user.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_export_user.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_user.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_change_user_password.as_field_group }}</div>
+          <div class="col-12">{{ form.scope_user.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse-role" aria-expanded="false" aria-controls="collapse-role">
+          Permisos Mantenimiento Roles
+        </button>
+      </h2>
+      <div id="collapse-role" class="accordion-collapse collapse"
+           data-bs-parent="#accordion-role-form">
+        <div class="accordion-body row">
+          <div class="col-md-6">{{ form.can_add_role.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_edit_role.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_delete_role.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_export_role.as_field_group }}</div>
+          <div class="col-md-6">{{ form.can_history_role.as_field_group }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

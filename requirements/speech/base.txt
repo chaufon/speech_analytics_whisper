@@ -1,0 +1,4 @@
+-r ../common/base.txt
+
+audioop-lts==0.2.2  # python 3.13 requirement
+mkdocs-material==9.6.22

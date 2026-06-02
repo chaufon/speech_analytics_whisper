@@ -1,0 +1,67 @@
+[
+{
+  "model": "analytics.agent",
+  "pk": 1,
+  "fields": {
+    "create_date": "2025-03-16T16:47:22.392",
+    "modify_date": "2025-03-16T16:47:22.392",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "AGENT ONE"
+  }
+},
+{
+  "model": "analytics.agent",
+  "pk": 2,
+  "fields": {
+    "create_date": "2025-04-14T16:08:56.339",
+    "modify_date": "2025-04-14T16:08:56.339",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "AGENT TWO"
+  }
+},
+{
+  "model": "analytics.agent",
+  "pk": 3,
+  "fields": {
+    "create_date": "2025-04-14T16:09:07.876",
+    "modify_date": "2025-04-14T16:09:07.876",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "AGENT THREE"
+  }
+},
+{
+  "model": "analytics.agent",
+  "pk": 4,
+  "fields": {
+    "create_date": "2025-04-14T16:09:22.603",
+    "modify_date": "2025-04-14T16:09:22.603",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "AGENT FOUR"
+  }
+},
+{
+  "model": "analytics.agent",
+  "pk": 5,
+  "fields": {
+    "create_date": "2025-04-14T16:09:34.805",
+    "modify_date": "2025-04-14T16:09:34.806",
+    "is_active": true,
+    "create_user": 3,
+    "modify_user": 3,
+    "campaign": 2,
+    "name": "AGENT FIVE"
+  }
+}
+]
