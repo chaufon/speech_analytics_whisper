@@ -127,8 +127,7 @@ pip install -r requirements/localai/dev.txt
 Create an environment file from one of the provided templates (`.env` is git-ignored):
 
 ```bash
-cp .env.example.dev .env                 # web app
-cp .env.localai.example.dev .env         # local-AI worker
+cp .env.example .env                 # web app
 ```
 
 Initialize the database and download the diarization model:
