@@ -162,8 +162,6 @@ if SENTRY_DSN:
 
     sentry_sdk.init(dsn=SENTRY_DSN, traces_sample_rate=0.0)
 
-DJANGO_MEDIA_ROOT_IS_MOUNTED = os.environ.get("DJANGO_MEDIA_ROOT_IS_MOUNTED", "False") == "True"
-
 # AWS Configuration
 AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID", "")
 AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY", "")

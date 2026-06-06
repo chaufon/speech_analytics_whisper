@@ -1,6 +1,5 @@
 import copy
 import logging
-import os
 import time
 
 from django.conf import settings
@@ -27,10 +26,6 @@ class TranscribeError(BaseAnalyticsException):
 
 class TypifyError(BaseAnalyticsException):
     msg = "Error tipificar los audios. No se ha completado la tarea."
-
-
-class AudioFolderNotMountedError(BaseAnalyticsException):
-    msg = "Error con la carpeta de red. No se puede acceder a los audios"
 
 
 class CeleryNotRunningError(BaseAnalyticsException):
@@ -128,7 +123,6 @@ class Analyzer:
         except ControlForceStop:
             self._pause_process(Control(self.process.pk).get_user_id())
         except (
-            AudioFolderNotMountedError,
             TranscribeError,
             TypifyError,
             CeleryNotRunningError,
@@ -153,9 +147,6 @@ class Analyzer:
                 self._delete_everything_from_aws()
 
     def _transcribe(self):
-        if settings.DJANGO_MEDIA_ROOT_IS_MOUNTED and not os.path.ismount(settings.MEDIA_ROOT):
-            raise AudioFolderNotMountedError()
-
         try:
             audios_for_transcription = self.process.get_audios_for_transcription(self.user)
         except Exception as e:

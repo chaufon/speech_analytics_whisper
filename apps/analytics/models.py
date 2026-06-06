@@ -3,7 +3,6 @@ import os
 import subprocess
 import tempfile
 
-from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.db import models, transaction
 from django.urls import reverse
@@ -982,10 +981,6 @@ class Audio(AnalyticsBaseModel):
 
     def save(self, *args, **kwargs):
         if self.pk is None:
-            if settings.DJANGO_MEDIA_ROOT_IS_MOUNTED and not os.path.ismount(settings.MEDIA_ROOT):
-                raise ValidationError(
-                    "Error con la carpeta de red, no se puede guardar el archivo."
-                )
             if not self.duration:
                 self.duration = get_duration_from_audio(self.file)
         super().save(*args, **kwargs)
